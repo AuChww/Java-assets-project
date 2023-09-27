@@ -1,0 +1,144 @@
+
+.fill-color {
+    -fx-text-fill: black;
+
+}
+.vote{
+    -fx-text-fill: black;
+}
+.vote:hover{
+    -fx-text-fill: #f61e1e;
+}
+.edit{
+    -fx-text-fill: white;
+}
+.edit:hover{
+    -fx-underline: true;
+}
+
+.sortvote{
+    -fx-background-color: #00a6d4;
+    -fx-text-fill: #4d4d4d;
+
+}
+.fill-text-color {
+    -fx-text-fill: #ADE9B9;
+}
+
+.fill-text-color-blue {
+    -fx-text-fill: #00a6d4;
+}
+
+.fill-text-color-green {
+    -fx-text-fill: #6effc7;
+}
+
+.fill-text-color-white {
+    -fx-text-fill: #f7fcfc;
+}
+
+.bg-green {
+    -fx-background-color: #6effc7;
+}
+
+.bg-white {
+    -fx-background-color: #ffffff;
+}
+
+.bg-manager {
+    -fx-background-color:  #f1f3f6;
+}
+
+.bg-back {
+    -fx-background-color:  #c7e9ff;
+    -fx-text-fill: white;
+}
+
+.bg-back-admin {
+    -fx-background-color:  #f1f3f6;
+    -fx-text-fill: white;
+}
+
+.bg-ban {
+    -fx-background-color:  #f1f3f6;
+}
+
+.bg-staff {
+    -fx-background-color: #D3D3D3;
+}
+
+
+.button {
+    -fx-background-color: #fedae8;
+    -fx-text-fill: black;
+}
+
+.button-admin {
+    -fx-background-color: #01a57a;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color: #0ac292; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-mode-green {
+    -fx-border-color: black;
+    -fx-background-color: #6effc7;
+    -fx-text-fill: black;
+    -fx-color-label-visible: black;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.button-mode-pink {
+    -fx-border-color: black;
+    -fx-background-color: #fedae8;
+    -fx-text-fill: black;
+    -fx-color-label-visible: black;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.button-mode-white {
+    -fx-border-color: black;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-color-label-visible: black;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.combobox {
+    color: white;
+    -fx-background-color: #fedae8;
+}
+
+.button-vote {
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.button-choose {
+    -fx-background-color: #fedae8;
+    -fx-text-fill: black;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.button-choose:hover {
+    -fx-background-color: #0ac292;
+    -fx-text-fill: white;
+}
+
+.button-login {
+    -fx-background-color: #01a57a;
+    -fx-text-fill: white;
+}
+
+.button-back {
+    -fx-background-color:  #fedae8;
+    -fx-text-fill: black;
+}
+

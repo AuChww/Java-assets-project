@@ -1,0 +1,138 @@
+
+.fill-color {
+    -fx-text-fill: white;
+}
+.vote{
+    -fx-text-fill: white;
+}
+.vote:hover{
+    -fx-text-fill: #00c5cd;
+}
+.sortvote{
+    -fx-background-color: #00c5cd;
+    -fx-text-fill: white;
+
+}
+
+.fill-text-color-green {
+    -fx-text-fill: #00c5cd;
+}
+
+.edit{
+    -fx-text-fill: white;
+}
+.edit:hover{
+    -fx-underline: true;
+}
+.fill-text-color {
+    -fx-text-fill: #4F4F4F;
+}
+
+.fill-text-color-blue {
+    -fx-text-fill: #00c5cd;
+}
+
+.bg {
+    -fx-background-color: #161b21;
+}
+
+.bg-back {
+    -fx-background-color: #152238;
+}
+
+.bg-ban {
+    -fx-background-color: #161b21;
+}
+
+.button {
+    -fx-background-color: #161b21;
+    -fx-text-fill: white;
+}
+
+.button-admin {
+    -fx-background-color: #00c5cd;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color: #00c5cd;
+    -fx-text-fill: white;
+}
+
+.button-mode {
+    -fx-border-color: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-color-label-visible: white;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.combobox {
+    color: white;
+    -fx-background-color: #00c5cd;
+}
+.button-vote {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.button-choose {
+    -fx-background-color:  #00c5cd;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.button-choose:hover {
+    -fx-background-color: #00FFFF;
+    -fx-text-fill: white;
+}
+
+.button-login {
+    -fx-background-color: #00c5cd;
+    -fx-text-fill: white;
+}
+
+.button-back {
+    -fx-background-color: #00c5cd;
+    -fx-text-fill: white;
+}
+
+.button-mode-green {
+    -fx-border-color: #6effc7;
+    -fx-background-color: black;
+    -fx-text-fill: #6effc7;
+    -fx-color-label-visible: black;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.button-mode-pink {
+    -fx-border-color: black;
+    -fx-background-color: #fedae8;
+    -fx-text-fill: black;
+    -fx-color-label-visible: black;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.button-mode-white {
+    -fx-border-color: black;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-color-label-visible: black;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+
+
+.bg-manager {
+    -fx-background-color:  black;
+}
+
+.bg-staff {
+    -fx-background-color: black;
+}
+

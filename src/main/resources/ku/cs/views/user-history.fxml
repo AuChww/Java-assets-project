@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.UserHistoryController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="216.0" style="-fx-background-color: #FFCCFF;">
+         <children>
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="109.0" layoutY="63.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="102.0" prefHeight="26.0" prefWidth="122.0" styleClass="button-mode-white" text="displayname" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Line endX="51.0" layoutX="133.0" layoutY="136.0" startX="-100.0" stroke="WHITE" />
+            <Button layoutX="111.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleHowtoButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="คู่มือการใช้งาน" />
+            <Button layoutX="16.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleMaterialsButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="วัสดุ" />
+            <Button layoutX="16.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleChangeButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="เปลี่ยนรหัสผ่าน" />
+            <Button layoutX="111.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="ออกจากระบบ" />
+            <ImageView fx:id="userImageView" fitHeight="140.0" fitWidth="140.0" layoutX="39.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="DateTimeAddLabel" layoutX="90.0" layoutY="420.0" prefHeight="17.0" prefWidth="116.0" />
+            <Label fx:id="NumberLabel" alignment="CENTER" layoutX="55.0" layoutY="277.0" prefHeight="17.0" prefWidth="106.0" />
+            <Label fx:id="ANameLabel" layoutX="90.0" layoutY="300.0" prefHeight="17.0" prefWidth="122.0" />
+            <Label fx:id="CategoryLabel" layoutX="90.0" layoutY="324.0" prefHeight="17.0" prefWidth="122.0" />
+            <Label fx:id="StatusLabel" layoutX="90.0" layoutY="348.0" prefHeight="17.0" prefWidth="116.0" />
+            <Label fx:id="PlaceLabel" layoutX="90.0" layoutY="396.0" prefHeight="17.0" prefWidth="116.0" />
+            <Label fx:id="OwnerLabel" layoutX="90.0" layoutY="372.0" prefHeight="17.0" prefWidth="116.0" />
+            <Button layoutX="16.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleUploadImageButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="เปลี่ยนรูปโปร" />
+            <Button layoutX="111.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleAssetsButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="ครุภัณฑ์" />
+            <Label alignment="CENTER_RIGHT" layoutX="2.0" layoutY="300.0" prefHeight="17.0" prefWidth="82.0" text="ชื่อ :" />
+            <Label alignment="CENTER_RIGHT" layoutX="2.0" layoutY="324.0" prefHeight="17.0" prefWidth="82.0" text="หมวดหมู่ :" />
+            <Label alignment="CENTER_RIGHT" layoutX="2.0" layoutY="420.0" prefHeight="17.0" prefWidth="82.0" text="เวลาครอบครอง :" />
+            <Label alignment="CENTER_RIGHT" layoutX="2.0" layoutY="348.0" prefHeight="17.0" prefWidth="82.0" text="สถานะ :" />
+            <Label alignment="CENTER_RIGHT" layoutX="2.0" layoutY="396.0" prefHeight="17.0" prefWidth="82.0" text="จัดเก็บ :" />
+            <Label alignment="CENTER_RIGHT" layoutX="2.0" layoutY="372.0" prefHeight="17.0" prefWidth="82.0" text="ผู้ครอบครอง :" />
+         </children>
+      </Pane>
+      <Pane layoutX="216.0" prefHeight="600.0" prefWidth="584.0" styleClass="bg-back">
+         <children>
+            <Label layoutX="139.0" layoutY="38.0" styleClass="fill-text-color-blue" text="รายการครุภัณฑ์ในครอบครอง">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Button layoutX="32.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleReturnButton" prefHeight="43.0" prefWidth="521.0" styleClass="button-mode-pink" text="ยื่นคำร้องขอคืนครุภัณฑ์">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ListView fx:id="borrowListView" layoutX="32.0" layoutY="97.0" prefHeight="432.0" prefWidth="521.0" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../Theme/dark.css" />
+      <URL value="@../../../Theme/light.css" />
+   </stylesheets>
+</AnchorPane>

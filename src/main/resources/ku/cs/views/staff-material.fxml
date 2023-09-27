@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.StaffMaterialController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="216.0" style="-fx-background-color: #FFCCFF;">
+         <children>
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="112.0" layoutY="63.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="110.0" prefHeight="26.0" prefWidth="122.0" styleClass="button-mode-white" text="displayname" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Line endX="51.0" layoutX="136.0" layoutY="144.0" startX="-100.0" stroke="WHITE" />
+            <Button layoutX="111.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleHowtoButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="คู่มือการใช้งาน" />
+            <Button layoutX="16.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleMaterialsButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="วัสดุ" />
+            <Button layoutX="16.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleChangeButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="เปลี่ยนรหัสผ่าน" />
+            <Button layoutX="111.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="ออกจากระบบ" />
+            <Button layoutX="16.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleUploadImageButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="เปลี่ยนรูปโปร" />
+            <Button layoutX="111.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleAssetsButton" prefHeight="26.0" prefWidth="89.0" styleClass="button-mode-green" text="ครุภัณฑ์" />
+            <VBox fx:id="MaterialInfoVBox1" alignment="CENTER" layoutX="21.0" layoutY="174.0" prefHeight="235.0" prefWidth="181.0" styleClass="button-mode-green">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="140.0" styleClass="button-back">
+                     <children>
+                        <Label text="ชื่อ : ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="NameLabel" text="Name">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="140.0" styleClass="bg-white">
+                     <children>
+                        <Label styleClass="fill-text-color-blue" text="จำนวนคงเหลือ : ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="AmountLabel" styleClass="fill-text-color-blue" text="Amount">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="140.0" styleClass="button-back">
+                     <children>
+                        <Label text="หมวดหมู่ : ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="140.0" styleClass="bg-white">
+                     <children>
+                        <Label fx:id="CategoryLabel" styleClass="fill-text-color-blue" text="Category">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="AlertLabel" alignment="CENTER" layoutX="21.0" layoutY="418.0" prefHeight="27.0" prefWidth="181.0" />
+            <Button fx:id="ThemeButton" layoutX="17.0" layoutY="459.0" mnemonicParsing="false" onAction="#ThemeButton" prefHeight="27.0" prefWidth="181.0" styleClass="button-mode-green" text="เปลี่ยนธีม" />
+         </children>
+      </Pane>
+      <Pane layoutX="216.0" prefHeight="600.0" prefWidth="584.0" styleClass="bg-back">
+         <children>
+            <Label layoutX="15.0" prefHeight="63.0" prefWidth="166.0" styleClass="fill-text-color-blue" text="รายการวัสดุ">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <ListView fx:id="MaterialListView" layoutX="15.0" layoutY="57.0" prefHeight="335.0" prefWidth="266.0" />
+            <ComboBox fx:id="sortByCategoryBox" layoutX="181.0" layoutY="21.0" prefHeight="26.0" prefWidth="89.0" promptText="เรียงจาก" styleClass="button-mode-pink" />
+            <TextField fx:id="NameTextField" alignment="CENTER" layoutX="16.0" layoutY="492.0" prefHeight="26.0" prefWidth="144.0" promptText="ชื่อวัสดุ" styleClass="button-mode-white">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button layoutX="436.0" layoutY="492.0" mnemonicParsing="false" onAction="#OnAddButton" prefHeight="31.0" prefWidth="134.0" styleClass="button-mode-pink" text="เพิ่มวัสดุใหม่">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="AmountAddTextField" alignment="CENTER" layoutX="15.0" layoutY="557.0" prefHeight="31.0" prefWidth="419.0" promptText="จำนวน" styleClass="button-mode-white">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="AmountBorrowTextField" alignment="CENTER" layoutX="210.0" layoutY="430.0" prefHeight="31.0" prefWidth="222.0" promptText="จำนวนที่เบิก" styleClass="button-mode-white">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Button layoutX="436.0" layoutY="430.0" mnemonicParsing="false" onAction="#OnLendButton" prefHeight="31.0" prefWidth="134.0" styleClass="button-mode-pink" text="เบิกวัสดุ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="349.0" layoutY="15.0" prefHeight="42.0" prefWidth="166.0" styleClass="fill-text-color-blue" text="ประวัติการเพิ่มวัสดุ" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ListView fx:id="MaterialAddListView" layoutX="303.0" layoutY="57.0" prefHeight="141.0" prefWidth="266.0" />
+            <Label alignment="CENTER" layoutX="353.0" layoutY="204.0" prefHeight="42.0" prefWidth="166.0" styleClass="fill-text-color-blue" text="ประวัติการเบิกวัสดุ" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ListView fx:id="MaterialLendListView" layoutX="303.0" layoutY="251.0" prefHeight="141.0" prefWidth="266.0" />
+            <Line endX="-35.0" endY="171.0" layoutX="327.0" layoutY="221.0" startX="-35.0" startY="-206.0" />
+            <Label alignment="CENTER" layoutX="66.0" layoutY="401.0" prefHeight="25.0" prefWidth="89.0" styleClass="fill-text-color-blue" text="ชื่อผู้เบิก" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="245.0" layoutY="401.0" prefHeight="25.0" prefWidth="152.0" styleClass="fill-text-color-blue" text="จำนวนที่ต้องการเบิก" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="43.0" layoutY="470.0" prefHeight="25.0" prefWidth="89.0" styleClass="fill-text-color-blue" text="เพิ่มชื่อวัสดุ" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="174.0" layoutY="470.0" prefHeight="25.0" prefWidth="89.0" styleClass="fill-text-color-blue" text="เพิ่มหมวดหมู่" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="150.0" layoutY="531.0" prefHeight="25.0" prefWidth="152.0" styleClass="fill-text-color-blue" text="เพิ่มจำนวนวัสดุที่เลือก" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="CategoryChoiceBox" layoutX="165.0" layoutY="492.0" prefHeight="31.0" prefWidth="107.0" styleClass="button-mode-white" />
+            <ChoiceBox fx:id="UserChoiceBox" layoutX="14.0" layoutY="430.0" prefHeight="31.0" prefWidth="192.0" styleClass="button-mode-white" />
+            <Button layoutX="436.0" layoutY="557.0" mnemonicParsing="false" onAction="#OnAddAmountButton" prefHeight="31.0" prefWidth="134.0" styleClass="button-mode-pink" text="เพิ่มจำนวนวัสดุ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="AmountMaterialTextField" alignment="CENTER" layoutX="274.0" layoutY="492.0" prefHeight="31.0" prefWidth="159.0" promptText="จำนวน" styleClass="button-mode-white">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="278.0" layoutY="470.0" prefHeight="25.0" prefWidth="152.0" styleClass="fill-text-color-blue" text="เพิ่มจำนวนวัสดุใหม่" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <stylesheets>
+            <URL value="@Theme/dark.css" />
+            <URL value="@Theme/light.css" />
+         </stylesheets>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../Theme/dark.css" />
+      <URL value="@../../../Theme/light.css" />
+   </stylesheets>
+</AnchorPane>
